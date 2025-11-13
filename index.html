@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki de The Last of Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wiki-container">
+        
+        <aside class="sidebar">
+            <div class="logo-header">
+                <h3>TLOU</h3>
+                <span>WIKI</span>
+            </div>
+            
+            <nav class="menu-nav">
+                <button class="menu-button active" data-target="introduccion">
+                    <i class="fas fa-home"></i>
+                    <span>Introducción</span>
+                </button>
+                <button class="menu-button" data-target="zombies">
+                    <i class="fas fa-biohazard"></i>
+                    <span>Wiki de Infectados</span>
+                </button>
+                <button class="menu-button" data-target="armas">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Arsenal y Mejoras</span>
+                </button>
+                <button class="menu-button" data-target="personajes">
+                    <i class="fas fa-users"></i>
+                    <span>Personajes</span>
+                </button>
+                <button class="menu-button" data-target="historia">
+                    <i class="fas fa-book-open"></i>
+                    <span>Historia</span>
+                </button>
+                
+                <button class="menu-button" data-target="zombies">
+            </nav>
+        </aside>
+
+        <main class="main-content">
+         <button class="menu-toggle-btn" aria-label="Abrir Menú">
+           <i class="fas fa-bars"></i>
+         </button>   
+            <section id="introduccion" class="content-section is-active">
+                <h2>Bienvenido a la Supervivencia</h2>
+                <p>Navega por la wiki usando el menú de la izquierda. Descubre información sobre los infectados, el arsenal de supervivencia y los personajes clave en el mundo de The Last of Us.</p>
+                <div class="intro-image">
+                    <img src="imagenes/the-last-of-us-hbo-serie-edificio-inclinado-boston-1674490448.avif" alt="Ciudad devastada">
+                    <span>"When you're lost in the darkness, look for the light."</span>
+                </div>
+            </section>
+
+            <section id="zombies" class="content-section">
+                <h2><i class="fas fa-biohazard"></i> Wiki de Infectados</h2>
+                <p>El hongo Cordyceps tiene múltiples etapas de infección, cada una más peligrosa que la anterior.</p>
+                
+                <div class="wiki-grid">
+                    <div class="wiki-card">
+                        <img src="imagenes/202061313572029_1.jpg.webp" alt="Corredor">
+                        <h3>Corredores (Runners)</h3>
+                        <p><strong>Descripción:</strong> Etapa 1. Recién infectados, aún conservan su humanidad visual pero son increíblemente rápidos y agresivos. Atacan en enjambres.</p>
+                        <p><strong>Cómo matarlos:</strong> Son vulnerables a todo. Un buen golpe cuerpo a cuerpo o un disparo bastará. El sigilo es útil para evitar la horda.</p>
+                    </div>
+                    <div class="wiki-card">
+                        <img src="imagenes/202061313572029_2.jpg.webp" alt="Acechador">
+                        <h3>Acechadores (Stalkers)</h3>
+                        <p><strong>Descripción:</strong> Etapa 2. El hongo comienza a crecer externamente. Son sigilosos, prefieren esconderse, observar y emboscar. Son rápidos y difíciles de rastrear.</p>
+                        <p><strong>Cómo matarlos:</strong> Mantente alerta y usa la escucha. No dejes que te flanqueen. Una escopeta a corta distancia es muy eficaz.</p>
+                    </div>
+                    <div class="wiki-card">
+                        <img src="imagenes/the-last-of-us-part-ii-clicker-model-1024x576.jpg.webp" alt="Chasqueador">
+                        <h3>Chasqueadores (Clickers)</h3>
+                        <p><strong>Descripción:</strong> Etapa 3. El hongo ha cegado al huésped, que ahora usa ecolocalización. Su "clic" es aterrador y letal.</p>
+                        <p><strong>Cómo matarlos:</strong> ¡No ataques cuerpo a cuerpo (sin una daga)! Son resistentes. La mejor opción es el sigilo con la daga, una escopeta a quemarropa o un disparo certero a la cabeza con un arma potente.</p>
+                    </div>
+                    
+                    <div class="wiki-card">
+                        <img src="imagenes/202061313572029_8.jpg" alt="Hinchado">
+                        <h3>Hinchados (Bloaters)</h3>
+                        <p><strong>Descripción:</strong> Etapa 4. Años de infección. Son tanques andantes cubiertos de una armadura fúngica. Arrojan bombas de esporas tóxicas.</p>
+                        <p><strong>Cómo matarlos:</strong> ¡Fuego! Son débiles al fuego (cócteles molotov, lanzallamas). Usa bombas de clavos y tus armas más potentes. Mantén la distancia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="armas" class="content-section">
+                <h2><i class="fas fa-crosshairs"></i> Arsenal y Mejoras</h2>
+                <p>En este mundo, un arma bien mantenida es tu mejor amiga. Las mejoras se realizan en los bancos de trabajo.</p>
+                
+                <div class="wiki-grid">
+                    <div class="wiki-card">
+                      <div class="weapon-image-wrapper"> <img src="imagenes/Shotgun_on_workbench.webp" alt="Escopeta">
+                        </div><div class="weapon-info"><h3>Escopeta de Corredera</h3>
+                        <p><strong>Descripción:</strong> Devastadora a corta distancia. Perfecta para Chasqueadores o cuando te ves rodeado.</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Cadencia de Fuego:</strong> Disparar más rápido salva vidas.</li>
+                                <li><strong>Potencia de Fuego:</strong> Para asegurar la muerte de un solo golpe.</li>
+                                <li><strong>Capacidad:</strong> Menos recargas en medio del pánico.</li>
+                            </ul>
+                        </p></div>
+                    </div>
+                    <div class="wiki-card">
+                      <div class="weapon-image-wrapper">  <img src="imagenes/9mm_mesa_trabajo.jpg" alt="Pistola">
+                        </div><div class="weapon-info"><h3>Pistola 9mm</h3>
+                        <p><strong>Descripción:</strong> El arma básica de supervivencia. Equilibrada pero con poco poder de detención.</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Capacidad de Cargador:</strong> Esencial para no recargar en pánico.</li>
+                                <li><strong>Cadencia de Fuego:</strong> Disparar más rápido salva vidas.</li>
+                            </ul>
+                        </p></div>
+                    </div>
+                    
+                    <div class="wiki-card">
+                        <div class="weapon-image-wrapper"><img src="imagenes/TLOU2-Revolver-ellie.webp" alt="Revólver">
+                       </div><div class="weapon-info"> <h3>Revólver</h3>
+                        <p><strong>Descripción:</strong> Lento pero increíblemente potente. Una bala en el lugar correcto puede derribar a casi cualquier cosa.</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Potencia de Fuego:</strong> Maximiza su ventaja.</li>
+                                <li><strong>Velocidad de Recarga:</strong> Reduce su mayor debilidad.</li>
+                            </ul>
+                        </p></div>
+                    </div>
+                    
+                    <div class="wiki-card">
+                      <div class="weapon-image-wrapper">  <img src="imagenes/Rifle_mesa_de_trabajo.jpg" alt="Rifle de Caza">
+                       </div><div class="weapon-info"> <h3>Rifle de Caza</h3>
+                        <p><strong>Descripción:</strong> El arma de largo alcance. Letal y precisa, ideal para eliminar enemigos a distancia antes de que te detecten.</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Mira Telescópica:</strong> Imprescindible.</li>
+                                <li><strong>Potencia de Fuego:</strong> Para atravesar blindajes.</li>
+                            </ul>
+                        </p></div>
+                    </div>
+                    
+                    <div class="wiki-card">
+                      <div class="weapon-image-wrapper">  <img src="imagenes/Lanzallamas_mesa_de_trabajo.jpg" alt="Lanzallamas">
+                       </div><div class="weapon-info"> <h3>Lanzallamas</h3>
+                        <p><strong>Descripción:</strong> Arma de control de masas. Quema a múltiples enemigos y es la mejor forma de matar Hinchados (Bloaters).</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Alcance:</strong> Para mantener el fuego lejos de ti.</li>
+                                <li><strong>Daño:</strong> Quema más rápido.</li>
+                            </ul>
+                        </p></div>
+                    </div>
+                    <div class="wiki-card">
+                      <div class="weapon-image-wrapper"> <img src="imagenes/Arco_mesa_trabajo.webp" alt="Arco">
+                        </div><div class="weapon-info"><h3>Arco</h3>
+                        <p><strong>Descripción:</strong> El arma de sigilo definitiva. Las flechas a veces se pueden recuperar. Letal y silencioso.</p>
+                        <p><strong>Mejores Mejoras:</strong>
+                            <ul>
+                                <li><strong>Alcance:</strong> Mejora la precisión a larga distancia.</li>
+                                <li><strong>Velocidad de tensado:</strong> Para preparar el disparo más rápido.</li>
+                            </ul>
+                        </p> </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="personajes" class="content-section">
+                <h2><i class="fas fa-users"></i> Personajes</h2>
+                <p>Las historias de aquellos que intentan sobrevivir.</p>
+                
+                <div class="wiki-grid-single-col">
+                    <div class="wiki-card-char">
+                        <img src="imagenes/part_i_joel_9.webp" alt="Joel">
+                        <div>
+                            <h3>Joel Miller</h3>
+                            <p>Un contrabandista endurecido que vive en la Zona de Cuarentena de Boston. La epidemia le arrebató a su hija, convirtiéndolo en un superviviente cínico y despiadado. Su visión del mundo cambia cuando se le encarga escoltar a Ellie, encontrando en ella una nueva razón para luchar y redescubriendo su humanidad.</p>
+                        </div>
+                    </div>
+                    <div class="wiki-card-char">
+                        <img src="imagenes/The-Last-of-Us-Epico-cosplay-le-ha-dado-vida-a-Ellie.webp" alt="Ellie">
+                        <div>
+                            <h3>Ellie Williams</h3>
+                            <p>Una huérfana de 14 años valiente y testaruda, nacida después de la pandemia. Es inmune al Cordyceps, lo que la convierte en la posible clave para una cura. Su viaje con Joel la obliga a madurar rápidamente, enfrentando la brutalidad del mundo y forjando un vínculo inquebrantable con su protector.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wiki-card-char">
+                        <img src="imagenes/Part_II_Tommy_infobox.png" alt="Tommy">
+                        <div>
+                            <h3>Tommy Miller</h3>
+                            <p>El hermano menor de Joel. Un ex-Luciérnaga que, a diferencia de Joel, mantiene su idealismo. Funda el asentamiento próspero de Jackson, Wyoming, y es un pilar moral en la vida de Joel y Ellie.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="wiki-card-char">
+                        <img src="imagenes/TessParteI.webp" alt="Tess">
+                        <div>
+                            <h3>Tess Servopoulos</h3>
+                            <p>La compañera de contrabando de Joel en Boston. Pragmática y dura. Es ella quien insiste en completar la misión de llevar a Ellie a las Luciérnagas, sacrificándose al final para darles una oportunidad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="wiki-card-char">
+                        <img src="imagenes/-5444534.jpg" alt="Marlene">
+                        <div>
+                            <h3>Marlene</h3>
+                            <p>La líder de las Luciérnagas. Es quien encarga a Joel y Tess la misión de escoltar a Ellie. Es una líder dispuesta a hacer sacrificios extremos, incluida la vida de Ellie, por la posibilidad de encontrar una cura.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="wiki-card-char">
+                        <img src="imagenes/The_Last_of_Us_Part_I_Bill.png" alt="Bill">
+                        <div>
+                            <h3>Bill</h3>
+                            <p>Un superviviente paranoico y socio comercial de Joel que vive solo en un pueblo lleno de trampas. A regañadientes, ayuda a Joel y Ellie a conseguir un vehículo funcional a cambio de favores pasados.</p>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="historia" class="content-section">
+                <h2><i class="fas fa-book-open"></i> Resumen de la Historia</h2>
+                <p>La saga de The Last of Us es una narrativa de supervivencia, pérdida y las profundidades de la naturaleza humana.</p>
+                
+                <div class="wiki-grid-single-col">
+                    <div class="wiki-card-char">
+                        <img src="imagenes/tlao.webp" alt="The Last of Us Part I">
+                        <div>
+                            <h3>The Last of Us: Part I</h3>
+                            <p>Veinte años después de la pandemia, Joel debe escoltar a Ellie, una adolescente inmune, a través de un EE.UU. devastado. Su misión, encargada por las Luciérnagas, es la última esperanza de la humanidad para una cura. Su viaje brutal forja un vínculo paternal, que culmina cuando Joel elige salvar a Ellie de la muerte segura en el quirófano, condenando al mundo pero salvando el suyo.</p>
+                        </div>
+                    </div>
+                    <div class="wiki-card-char">
+                        <img src="imagenes/The_Last_of_Us_2_capa.png" alt="The Last of Us Part II">
+                        <div>
+                            <h3>The Last of Us: Part II</h3>
+                            <p>Cinco años después, la paz de Ellie y Joel en Jackson se rompe. Un acto de violencia brutal desata un ciclo de venganza. Ellie viaja a Seattle para cazar a los responsables, solo para descubrir que sus enemigos tienen sus propias razones. La historia explora el trauma, la empatía y el precio de la venganza, mostrando que no hay héroes, solo supervivientes rotos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        </main>
+    </div>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Encuentra el botón de hamburguesa y el menú lateral
+            const menuToggle = document.querySelector('.menu-toggle-btn');
+            const sidebar = document.querySelector('.sidebar');
+
+            // 2. Agrega el evento de clic al botón
+            menuToggle.addEventListener('click', function() {
+                // Alterna la clase 'is-open' en el menú (sidebar). 
+                // Esto activa/desactiva la regla CSS que lo desliza.
+                sidebar.classList.toggle('is-open');
+
+                // Opcional: Cambia el ícono de la hamburguesa a una 'X' al abrir
+                const icon = menuToggle.querySelector('i');
+                if (sidebar.classList.contains('is-open')) {
+                    icon.classList.remove('fa-bars'); // fa-bars es el ícono de líneas
+                    icon.classList.add('fa-times');  // fa-times es la 'X'
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
