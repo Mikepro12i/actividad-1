@@ -1,0 +1,43 @@
+/* Estilo Base para la organización */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Estilo de las Cards de Autos --- */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--bs-border-color); /* Usa la variable de borde de Bootstrap */
+}
+
+.card-hover:hover {
+    transform: translateY(-5px); /* Efecto "levantar" */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Altura fija para la imagen */
+}
+
+.card-price {
+    font-weight: bold;
+    /* Los colores de texto serán manejados por el modo claro/oscuro de Bootstrap */
+}
+
+/* --- Filtros (Sidebar) --- */
+.sticky-sidebar {
+    /* Fija la barra de filtros */
+    position: sticky;
+    top: 80px; 
+}
+
+/* Opcional: Estilo para la alerta temporal de 'añadido' */
+.fixed-top-alert {
+    position: absolute;
+    top: 70px; 
+    right: 50%;
+    transform: translateX(50%);
+    width: auto;
+    max-width: 90%;
+    z-index: 1050; /* Sobre la navbar */
+}
