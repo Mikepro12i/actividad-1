@@ -1,0 +1,201 @@
+:root {
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+/* --- TEMAS --- */
+.light {
+  --bg-body: #f0f2f5;
+  --bg-panel: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #9ca3af;
+  --border: #e5e7eb;
+  --item-bg: #f9fafb;
+  --item-hover: #f3f4f6;
+  --selected-bg: #ede9fe; /* Morado muy claro */
+  --selected-border: #8b5cf6;
+}
+
+.dark {
+  --bg-body: #000000;
+  --bg-panel: #121212;
+  --text-main: #ffffff;
+  --text-muted: #6b7280;
+  --border: #27272a;
+  --item-bg: #18181b;
+  --item-hover: #27272a;
+  --selected-bg: #2e1065; /* Morado muy oscuro */
+  --selected-border: #8b5cf6;
+}
+
+/* Layout General */
+.app-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-header h1 { color: var(--primary); font-weight: 800; letter-spacing: -1px;}
+
+/* --- GRID DASHBOARD (LA PARTE IMPORTANTE PARA PC) --- */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr; /* Por defecto (móvil) 1 columna */
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 150px); /* Ocupa el resto de la pantalla */
+}
+
+/* Cuando la pantalla es grande (PC/Tablet) usamos 2 columnas */
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: 400px 1fr; /* Lista fija 400px, Notas flexible */
+  }
+}
+
+/* --- PANELES COMUNES --- */
+.task-panel, .notepad-panel {
+  background-color: var(--bg-panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Para que el scroll quede dentro */
+}
+
+/* --- IZQUIERDA: LISTA --- */
+.input-group { display: flex; gap: 10px; margin-bottom: 1.5rem; }
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  outline: none;
+}
+
+input:focus, textarea:focus { border-color: var(--primary); }
+
+.add-btn {
+  background: var(--primary); color: white; border: none;
+  border-radius: var(--radius); width: 50px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.task-list {
+  list-style: none;
+  overflow-y: auto; /* Scroll solo en la lista */
+  flex: 1;
+  display: flex; 
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 5px;
+}
+
+.task-item {
+  background-color: var(--item-bg);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.task-item:hover { background-color: var(--item-hover); }
+
+.task-item.selected {
+  background-color: var(--selected-bg);
+  border-color: var(--selected-border);
+}
+
+.task-info { display: flex; align-items: center; gap: 10px; flex: 1; overflow: hidden;}
+
+.task-title { 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through; color: var(--text-muted);
+}
+
+.check-btn {
+  background: transparent; border: 1px solid var(--text-muted);
+  color: transparent; border-radius: 50%; width: 20px; height: 20px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.check-btn.active { background: #10b981; border-color: #10b981; color: white; }
+
+.delete-btn { background: none; border: none; color: #ef4444; cursor: pointer; opacity: 0.5; }
+.delete-btn:hover { opacity: 1; }
+.icon-indicator { color: var(--text-muted); margin-right: 8px;}
+
+/* --- DERECHA: BLOC DE NOTAS --- */
+.notepad-content { display: flex; flex-direction: column; height: 100%; gap: 1rem; }
+
+.notepad-header { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.8rem; font-weight: bold; letter-spacing: 1px; }
+
+.notepad-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 5px 0;
+}
+.notepad-title:focus { border-bottom-color: var(--primary); }
+
+.notepad-body {
+  flex: 1;
+  background-color: var(--bg-body); /* Fondo diferente para simular papel/area de texto */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  resize: none; /* Quitar el triangulo de resize */
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: none;
+}
+
+.empty-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Botón de tema */
+.theme-toggle { background: none; border: none; color: var(--text-main); cursor: pointer; }
