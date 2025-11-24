@@ -1,0 +1,171 @@
+:root {
+  --slime-purple: #9b5de5;
+  --slime-blue: #00bbf9;
+  --slime-dark: #240046;
+  --slime-bg: #10002b;
+  --slime-text: #caffbf;
+}
+
+body {
+  background-color: var(--slime-bg);
+  color: white;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Evitar scroll bars en full screen */
+}
+
+/* --- Contenedor Principal --- */
+.slime-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 4px solid var(--slime-blue);
+  border-radius: 30px;
+  padding: 20px;
+  width: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px var(--slime-purple);
+  transition: all 0.3s ease;
+}
+
+.slime-title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--slime-blue);
+  text-align: center;
+  text-shadow: 2px 2px 0px var(--slime-purple);
+}
+
+/* --- Pantalla --- */
+.display-screen {
+  background-color: #05011a;
+  border: 3px solid var(--slime-purple);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: inset 0 0 15px var(--slime-purple);
+  overflow: hidden;
+}
+
+.result-text {
+  font-size: 2.5rem;
+  color: var(--slime-blue);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* --- Grilla de Botones --- */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 12px;
+  flex-grow: 1; /* Ocupar el espacio restante */
+}
+
+/* --- Estilos de Botones Base --- */
+.slime-btn {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 15px 0; /* Altura vertical del botón */
+  transition: transform 0.1s;
+  
+  /* Efecto gelatina 3D */
+  box-shadow: 
+    inset 3px 3px 5px rgba(255,255,255,0.3), 
+    inset -3px -3px 5px rgba(0,0,0,0.3),
+    0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Colores específicos por tipo */
+.slime-btn.num {
+  background: var(--slime-blue);
+  border-radius: 35% 45% 40% 40%; /* Forma orgánica */
+}
+
+.slime-btn.op {
+  background: var(--slime-purple);
+  border-radius: 40% 40% 45% 35%;
+}
+
+.slime-btn.clear {
+  background: #ef233c; /* Rojo para borrar */
+  border-radius: 30% 50% 30% 50%;
+}
+
+.slime-btn.equal {
+  background: #38b000; /* Verde para igual */
+  grid-column: span 2; /* Ocupa 2 espacios */
+  border-radius: 20px;
+}
+
+.slime-btn.zero-btn {
+  grid-column: span 2; /* El 0 ocupa 2 espacios */
+  border-radius: 20px;
+}
+
+.slime-btn.plus {
+  grid-row: span 2; /* El más es alto */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Forzar altura completa */
+}
+
+/* Efecto Click */
+.slime-btn:active {
+  transform: scale(0.92);
+}
+
+/* --- RESPONSIVE (Tablet y Móvil) --- */
+@media (max-width: 768px) {
+  body {
+    background-color: var(--slime-dark); /* Fondo sólido en móvil se ve mejor */
+  }
+
+  .slime-container {
+    width: 100vw;      /* Ancho completo */
+    height: 100vh;     /* Alto completo */
+    max-width: none;
+    border: none;      /* Sin bordes externos */
+    border-radius: 0;  /* Cuadrado completo */
+    padding: 15px;
+    box-sizing: border-box; /* Asegura que el padding no sume al ancho */
+  }
+
+  .display-screen {
+    height: 100px;     /* Pantalla más grande */
+    margin-top: 10px;
+  }
+  
+  .result-text {
+    font-size: 3.5rem; /* Texto más grande */
+  }
+
+  .buttons-grid {
+    gap: 15px;
+  }
+
+  .slime-btn {
+    font-size: 2rem; /* Números más grandes para dedos */
+    border-radius: 25px !important; /* Formas más uniformes en móvil para encajar mejor */
+  }
+  
+  .slime-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
