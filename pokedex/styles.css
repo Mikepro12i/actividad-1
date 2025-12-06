@@ -1,0 +1,162 @@
+/* Reset y Fuente Pixelada */
+body {
+    background-color: #333; /* Fondo oscuro para resaltar la Pokedex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Fuente retro para el estilo Pokédex */
+    font-family: 'Press Start 2P', cursive; 
+}
+
+/* --- CUERPO DE LA POKEDEX --- */
+.pokedex {
+    background-color: #dc0a2d; /* Rojo clásico */
+    width: 350px;
+    height: 550px;
+    border-radius: 15px;
+    padding: 20px;
+    /* Sombra 3D para darle profundidad */
+    box-shadow: -5px 5px 0 #8b0000, 5px 5px 15px rgba(0,0,0,0.5);
+    border: 1px solid #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- LUCES SUPERIORES --- */
+.pokedex-top {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.light-big-blue {
+    width: 50px;
+    height: 50px;
+    background: #14f5ff; /* Color del sensor */
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #14f5ff;
+    position: relative;
+}
+.light-reflection {
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.light-small {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.red { background-color: #ff0000; }
+.yellow { background-color: #ffff00; }
+.green { background-color: #00ff00; }
+
+/* --- PANTALLA --- */
+.screen-border {
+    background-color: #dedede; /* Gris claro */
+    /* Borde asimétrico clásico de la Pokédex */
+    border-radius: 10px 10px 30px 10px; 
+    padding: 20px;
+    border: 2px solid #555;
+    flex-grow: 1;
+}
+
+.screen-display {
+    background-color: #232323; /* Pantalla activa (negra) */
+    color: #fff;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid #555;
+    padding: 10px;
+    overflow-y: auto;
+    /* Estilo de texto */
+    font-size: 0.7rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- CONTROLES --- */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+input {
+    width: 140px;
+    padding: 10px;
+    background-color: #98cb98; /* Verde Gameboy para el display de texto */
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.6rem;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-button {
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    box-shadow: -2px 2px 0 #000;
+    cursor: pointer;
+    font-size: 0.6rem;
+}
+
+.nav-button:active {
+    box-shadow: inset 0 0 5px #000;
+    transform: translateY(2px);
+}
+
+/* Cruz direccional (Decorativa) */
+.d-pad {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+.d-pad-x, .d-pad-y {
+    background-color: #222;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+.d-pad-x { width: 70px; height: 20px; top: 25px; }
+.d-pad-y { width: 20px; height: 70px; left: 25px; }
+
+/* --- CONTENIDO DINÁMICO --- */
+.pokemon-img {
+    width: 100px;
+    /* Mantiene los píxeles cuadrados para el estilo retro */
+    image-rendering: pixelated; 
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.placeholder-text {
+    color: #666;
+    text-align: center;
+}

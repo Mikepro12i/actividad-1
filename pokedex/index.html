@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="pokedex">
+        
+        <div class="pokedex-top">
+            <div class="light-big-blue">
+                <div class="light-reflection"></div>
+            </div>
+            <div class="light-small red"></div>
+            <div class="light-small yellow"></div>
+            <div class="light-small green"></div>
+        </div>
+
+        <div class="screen-border">
+            <div class="screen-display" id="appContainer">
+                <p class="placeholder-text">Esperando entrada...</p>
+            </div>
+            <div class="screen-decoration">
+                <div class="red-dot"></div>
+                <div class="burger-lines">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-group">
+                <input type="text" id="searchInput" placeholder="Nombre/ID...">
+            </div>
+            
+            <div class="buttons-group">
+                <button id="searchBtn" class="nav-button">GO</button>
+                <div class="d-pad">
+                    <div class="d-pad-x"></div>
+                    <div class="d-pad-y"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
